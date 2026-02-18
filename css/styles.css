@@ -1,64 +1,91 @@
+:root {
+    --primary-dark: #1e272e;
+    --accent-blue: #0984e3;
+    --soft-white: #f5f6fa;
+    --transition-speed: 0.3s;
+}
+
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--soft-white);
+    color: var(--primary-dark);
 }
 
 header {
-    padding: 40px 0;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #1e272e 0%, #2d3436 100%);
+    color: white;
+    margin-bottom: 40px;
 }
 
-.name-header {
-    text-align: center;
-    padding-bottom: 40px;
-}
 nav {
     display: flex;
     justify-content: center;
-    list-style-type: none;
-    gap: 100px;
+    gap: 60px;
 }
 
 nav a {
     text-decoration: none;
-    color: inherit;
-    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all var(--transition-speed);
+    border-bottom: 2px solid transparent;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
+nav a:hover {
+    color: white;
+    border-bottom: 2px solid var(--accent-blue);
 }
 
-h5 {
-    padding-bottom: 30px;
+.about-card, .portfolio-card {
+    background: white;
+    border: none !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-.about-me li{
-    padding-bottom: 30px;
+.about-card:hover, .portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-.sqa-logo{
-    padding:30px;
-    padding-top:60px;
+.name-header {
+    text-align: center;
+    padding: 40px 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+h2.card-title {
+    color: var(--primary-dark);
+    font-size: 1.6rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2.card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-blue);
+}
+
+.portfolio-card h2.card-title::after {
+    left: 1.5%;
+    transform: translateX(-50%);
 }
 
 @media (max-width: 600px) {
     nav {
-        gap: 20px;
+        gap: 15px;
         flex-direction: column;
         align-items: center;
     }
-}
-
-.about-card {
-    max-width: 850px;
-    width: 95%;
-    margin-bottom: 2rem;
-}
-
-.portfolio-card {
-    max-width: 1000px;
-    width: 95%;
-    margin-bottom: 3rem;
-    text-align: center;
 }
