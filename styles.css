@@ -27,3 +27,16 @@ nav a {
     display: block;
     margin-top: 0;
 }
+
+h5 {
+    padding-bottom: 30px;
+}
+
+.about-me li{
+    padding-bottom: 30px;
+}
+
+.sqa-logo{
+    padding:30px;
+    padding-top:60px;
+}
