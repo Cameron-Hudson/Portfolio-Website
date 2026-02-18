@@ -49,3 +49,12 @@ h5 {
         align-items: center;
     }
 }
+
+.about-card {
+    max-width: 850px;
+    width: 95%;
+}
+
+.portfolio-card {
+    max-width: 1000px;
+}
