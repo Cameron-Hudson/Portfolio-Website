@@ -53,8 +53,12 @@ h5 {
 .about-card {
     max-width: 850px;
     width: 95%;
+    margin-bottom: 2rem;
 }
 
 .portfolio-card {
     max-width: 1000px;
+    width: 95%;
+    margin-bottom: 3rem;
+    text-align: center;
 }
